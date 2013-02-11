@@ -320,10 +320,13 @@ Contents, indices and tables
 .. toctree::
     :maxdepth: 2
 
+    introduction
     examples
     subfactory
+    django
     post_generation
     changelog
+    ideas
 
 * :ref:`genindex`
 * :ref:`modindex`
