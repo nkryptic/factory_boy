@@ -10,10 +10,10 @@ Basic usage
 -----------
 
 
-Declaring a factory is quite simple:
+Factories declare a set of attributes used to instantiate an object, whose class is defined in the FACTORY_FOR attribute:
 
 - Subclass ``factory.Factory`` (or a more suitable subclass)
-- Set a ``FACTORY_FOR`` attribute pointing to the target class
+- Set its ``FACTORY_FOR`` attribute to the target class
 - Add defaults for keyword args to pass to the associated class' ``__init__`` method
 
 
@@ -34,6 +34,11 @@ You may now get ``base.User`` instances trivially:
 
     >>> john = UserFactory()
     <User: John Doe>
+
+It is also possible to override the defined attributes by passing keyword arguments:
+
+.. code-block:: pycon
+
     >>> jack = UserFactory(firstname="Jack")
     <User: Jack Doe>
 
