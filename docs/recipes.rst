@@ -5,8 +5,8 @@ Common recipes
 .. note:: Most recipes below take on Django model examples, but can also be used on their own.
 
 
-SubFactory
-----------
+Dependent objects (ForeignKey)
+------------------------------
 
 When one attribute is actually a complex field
 (e.g a :class:`~django.db.models.ForeignKey` to another :class:`~django.db.models.Model`),
@@ -32,8 +32,8 @@ use the :class:`~factory.SubFactory` declaration:
         group = factory.SubFactory(GroupFactory)
 
 
-RelatedFactory
---------------
+Reverse dependencies (reverse ForeignKey)
+-----------------------------------------
 
 When a related object should be created upon object creation
 (e.g a reverse :class:`~django.db.models.ForeignKey` from another :class:`~django.db.models.Model`),
